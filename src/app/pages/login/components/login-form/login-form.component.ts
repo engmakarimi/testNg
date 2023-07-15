@@ -40,8 +40,8 @@ export class LoginFormComponent {
   snackBar=inject(MatSnackBar) 
   ngOnInit() {
     this.form = new FormGroup({
-      userName: new FormControl<string>('', [Validators.required]),
-      password: new FormControl<string>('', [Validators.required]),
+      userName: new FormControl<string>('segal', [Validators.required]),
+      password: new FormControl<string>('123456', [Validators.required]),
     });
   }
 
