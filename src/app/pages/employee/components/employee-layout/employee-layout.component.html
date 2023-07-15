@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-content>
+    <div [ngSwitch]="viewMode$ | async">
+      <ng-template [ngSwitchCase]="viewModeEnum.Create">
+        <app-employee-create-form></app-employee-create-form>
+      </ng-template>
+      <ng-template [ngSwitchCase]="viewModeEnum.Details">
+        <app-employee-details-form></app-employee-details-form>
+      </ng-template>
+      <ng-template [ngSwitchCase]="viewModeEnum.Edit">
+        <app-employee-edit-form></app-employee-edit-form>
+      </ng-template>
+      <ng-template [ngSwitchCase]="viewModeEnum.Default">
+        <app-employee-details-layout
+          [employee]="userInfo"
+        ></app-employee-details-layout>
+      </ng-template>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<app-employee-list [dataSource]="employees$ | async"></app-employee-list>

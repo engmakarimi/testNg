@@ -1,0 +1,34 @@
+<div>
+  <app-description>
+    <span descriptions-title>name </span>
+    {{ employee.name }}
+  </app-description>
+  <app-description>
+    <span descriptions-title>surname </span>
+    {{ employee.surname }}
+  </app-description>
+  <app-description>
+    <span descriptions-title>ID </span>
+    {{ employee.id }}
+  </app-description>
+</div>
+<div>
+  <app-description>
+    <span descriptions-title>date of birth </span>
+    {{ employee.dateOfBirth | date : "short" }}
+  </app-description>
+  <app-description>
+    <span descriptions-title>office </span>
+    {{ employee.office }}
+  </app-description>
+  <app-description>
+    <span descriptions-title>access </span>
+    {{ employee.access }}
+  </app-description>
+</div>
+<div>
+  <app-description>
+    <span descriptions-title>description </span>
+    {{ employee.description }}
+  </app-description>
+</div>

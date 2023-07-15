@@ -1,0 +1,28 @@
+<h2 class="login__title">Login</h2>
+<form [formGroup]="form" (ngSubmit)="submit()" class="login__form">
+  <div class="login__form__inputs">
+  <mat-form-field>
+    <mat-label>user name</mat-label>
+    <input matInput formControlName="userName" />
+    <mat-error *ngIf="form.controls['userName'].invalid">'field is required'</mat-error>
+
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>password</mat-label>
+    <input
+      matInput
+      [type]="hide ? 'password' : 'text'"
+      formControlName="password"
+    />
+    <mat-error *ngIf="form.controls['password'].invalid">'field is required'</mat-error>
+    <button type="button" mat-icon-button matSuffix (click)="hide = !hide">
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+  <div class="login__form__links">
+  <a>forgot password</a>
+  <button type="submit" mat-raised-button [disabled]="!form.valid">Enter</button>
+  <a>Term and policy</a>
+</div>
+</form>

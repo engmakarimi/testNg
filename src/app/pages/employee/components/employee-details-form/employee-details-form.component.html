@@ -1,0 +1,13 @@
+<div *ngIf="employee$ | async as employee">
+  <app-employee-details-layout
+    [employee]="employee"
+  ></app-employee-details-layout>
+</div>
+<button
+  type="button"
+  mat-raised-button
+  (click)="cancel()"
+  class="details__button"
+>
+  cancel
+</button>

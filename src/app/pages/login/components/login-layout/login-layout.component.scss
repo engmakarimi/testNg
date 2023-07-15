@@ -1,0 +1,8 @@
+:host {
+    @apply flex flex-row justify-end;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center, 50%, 50%;
+    background-image: url('/assets/login.png')
+}
